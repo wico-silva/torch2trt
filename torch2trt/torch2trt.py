@@ -490,6 +490,7 @@ class TRTModule(torch.nn.Module):
             self.context.profiler = trt.Profiler()
 
 
+@torch.no_grad()
 def torch2trt(module,
               inputs,
               input_names=None,
